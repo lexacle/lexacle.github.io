@@ -1,0 +1,18 @@
+.tag-icon{
+    position:absolute;
+    right:0;
+    top: 0;
+    margin: 10px;
+}
+.gradient-text{
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #6158e9 0%, #fd475d 100%);
+    color: transparent !important;
+}
+
+.shop_page_number.top{
+    margin-bottom: 40px;
+}

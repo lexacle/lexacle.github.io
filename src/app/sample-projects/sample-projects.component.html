@@ -1,0 +1,184 @@
+<section class="breadcrumb_area">
+    <img class="breadcrumb_shap" src="/assets/img/breadcrumb/banner_bg.png" alt="">
+    <div class="container">
+        <div class="breadcrumb_content text-center">
+            <h1 class="f_p f_600 f_size_40 w_color l_height40 mb_20">Our Sample Projects</h1>
+            <p class="f_400 w_color f_size_16 l_height26">Websites, Web Apps, Mobile Apps and Management Systems</p>
+        </div>
+    </div>
+</section>
+<section class="case_study_area sec_pad">
+    <div class="container">
+        <div class="row" *ngIf="onlineData === true">
+            <div class="col-lg-3 col-sm-6" *ngFor="let item of items | async">
+                <div class="case_study_item">
+                    <span class="tag-icon gradient-text size-30"><i class="{{ item.icon }}"></i></span>
+                    <img src="/assets/img/samples/{{ item.photo }}" alt="{{ item.title }}">
+                    <div class="text">
+                        <p class="date">{{ item.title }}</p>
+                        <a routerLink="/sample-projects/{{item.pretty}}">
+                            <h3>{{ item.app }}</h3>
+                        </a>
+                        <p>{{ item.client }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="onlineData === false">
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <span class="tag-icon gradient-text size-30"><i class="ti-android"></i></span>
+                    <img src="/assets/img/samples/case_01.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Thriving Singles App</p>
+                        <a href="/sample-projects/details">
+                            <h3>Mobile Application</h3>
+                        </a>
+                        <p>Client: Lexacle Technologies Ltd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <span class="tag-icon gradient-text size-30"><i class="ti-world"></i></span>
+                    <img src="/assets/img/samples/case_02.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Websites Grader</p>
+                        <a href="/sample-projects/details">
+                            <h3>Web Application</h3>
+                        </a>
+                        <p>Client: EAC Directory Ltd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_03.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Tours and Travel Agency</p>
+                        <a href="/sample-projects/details">
+                            <h3>Travel Agency Website</h3>
+                        </a>
+                        <p>Client: Jambo Travelhouse Safaris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_04.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Hotel Business Website</p>
+                        <a href="/sample-projects/details">
+                            <h3>Business Website</h3>
+                        </a>
+                        <p>Client: Lazion Hotel Ltd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_05.jpg" alt="">
+                    <div class="text">
+                        <p class="date">NGO Donations Website</p>
+                        <a href="/sample-projects/details">
+                            <h3>Organization Website</h3>
+                        </a>
+                        <p>Client: Dauwoye Organization</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_06.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Shopping & Delivery Website</p>
+                        <a href="/sample-projects/details">
+                            <h3>Gift Shop Website</h3>
+                        </a>
+                        <p>Client: Shopah Express</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_07.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Graphics & Design Website</p>
+                        <a href="/sample-projects/details">
+                            <h3>E-Commerce Website</h3>
+                        </a>
+                        <p>Client: Mutasya Solutions Ltd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_08.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Law Firm Agency</p>
+                        <a href="/sample-projects/details">
+                            <h3>PWA Web Application</h3>
+                        </a>
+                        <p>Client: Havi & Co. Advocates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_09.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Travel Agency</p>
+                        <a href="/sample-projects/details">
+                            <h3>Website</h3>
+                        </a>
+                        <p>Client: EAC Transporters Ltd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_10.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Real Estate Agency</p>
+                        <a href="/sample-projects/details">
+                            <h3>Management System</h3>
+                        </a>
+                        <p>Client: Liber PMS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_11.jpg" alt="">
+                    <div class="text">
+                        <p class="date">Taxi Booking App</p>
+                        <a href="/sample-projects/details">
+                            <h3>Mobile Application</h3>
+                        </a>
+                        <p>Client: Tufike Pamoja Cabs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="case_study_item">
+                    <img src="/assets/img/samples/case_12.jpg" alt="">
+                    <div class="text">
+                        <p class="date">E-commerce Website</p>
+                        <a href="/sample-projects/details">
+                            <h3>Website</h3>
+                        </a>
+                        <p>Client: Dannykam Agencies</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="col-lg-12 list-unstyled page-numbers shop_page_number bottom">
+                <li><a class="prev page-numbers" href="#"><i class="ti-arrow-left"></i></a></li>
+                <li><span aria-current="page" class="page-numbers current">1</span></li>
+                <li><a class="page-numbers" href="#">2</a></li>
+                <li><a class="page-numbers" href="#">3</a></li>
+                <li><a class="page-numbers" href="#">4</a></li>
+                <li><a class="next page-numbers" href="#"><i class="ti-arrow-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</section>

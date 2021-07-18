@@ -1,0 +1,63 @@
+<section class="sitemap_banner_area">
+    <div class="parallax-effecto"
+        style="background: url(/assets/img/bg/sitemap-generator.jpg) no-repeat; background-size: cover;">
+    </div>
+    <div class="container">
+        <div class="sitemap_banner_content site_map font-buntu">
+            <h1 class="f_p f_size_30 l_height50 f_600 t_color text-white">XML Sitemap Generator</h1>
+            <p class="f_400 f_size_18 text-light">You need a sitemap for visitors to discover your website on Google.
+                <br> Generate your XML Sitemap below. <span class="align-middle rotate-90"><i
+                        class="ti-hand-point-down size-30"></i></span>
+            </p>
+            <form [formGroup]="sitemapGeneratorForm" (ngSubmit)="sitemapGenerator()" novalidate>
+                <div class="input-group subcribes">
+                    <input type="text" formControlName="domain" class="form-control memail"
+                        placeholder="Enter url e.g lexacle.com" required>
+                    <button class="btn_submit btn_submit1 f_size_15 f_500 event_btn btn-hover" type="submit">Generate
+                        Sitemap</button>
+                    <button class="btn_submit btn_submit2 f_size_15 f_500 event_btn btn-hover" type="submit"><i
+                            class="ti-arrow-right"></i></button>
+                    <span class="error-icon danger-text" *ngIf="isSubmitted && errorControl.domain.errors?.required"><i
+                            class="ti-help size-30"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="saas_features_area_two sec_pad">
+    <div class="container">
+        <div class="sec_title text-center mb_70 mt_50 wow fadeInUp" data-wow-delay="0.3s">
+            <h1 class="f_p f_size_30 l_height50 f_600 t_color">How to use the Generated Sitemap</h1>
+            <p class="f_400 f_size_16">Enter your website url above and click on <span class="danger-text">Genarate
+                    Sitemap</span> button then you
+                will<br> need to enter your name and email address to receive the XML SItemap.</p>
+        </div>
+        <div class="row mb_30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="saas_features_item text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="/assets/img/icons/shield.png" alt="">
+                    <h4 class="f_size_20 f_p t_color f_500">Installation</h4>
+                    <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father
+                        blatant morish char cuppa.!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="saas_features_item text-center wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="/assets/img/icons/real-estate.png" alt="">
+                    <h4 class="f_size_20 f_p t_color f_500">Customized Apps</h4>
+                    <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father
+                        blatant morish char cuppa.!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="saas_features_item text-center wow fadeInUp" data-wow-delay="0.7s">
+                    <img src="/assets/img/icons/statistics.png" alt="" style="height: 80px;">
+                    <h4 class="f_size_20 f_p t_color f_500">Analytics</h4>
+                    <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father
+                        blatant morish char cuppa.!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

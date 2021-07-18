@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "lexacle-website"
+  },
+  "targets": {
+    "lexacle-website": {
+      "hosting": {
+        "lexacle": [
+          "lexacle-website"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+<header class="header_area animated slow delay-2s">
+    <nav class="navbar navbar-expand-lg menu_one menu_four hosting_menu">
+        <div class="container">
+            <a class="navbar-brand sticky_logo" routerLink="/">
+                <img class="lexacle-icon" src="./assets/img/svg/lt-white.svg" alt="Lexacle Technologies">
+                <span class="text-logo align-middle text-white">LEXACLE</span>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="menu_toggle">
+                    <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="hamburger-cross">
+                        <span></span>
+                        <span></span>
+                    </span>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav menu w_menu m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/" data-toggle="tooltip" data-trigger="hover"
+                            data-placement="top" data-content="Professional Web and App Development Services"
+                            title="Home">
+                            Home
+                        </a>
+                    </li>
+                    <li class="dropdown submenu nav-item"><a data-toggle="tooltip" data-trigger="hover" title="Services"
+                            class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" href="#">Services</a>
+                        <ul role="menu" class="dropdown-menu">
+                            <div class="arrow-left"></div>
+                            <li class="nav-item"><a routerLink="/domains-and-hosting" class="nav-link">Domains and
+                                    Hosting</a></li>
+                            <li class="nav-item"><a routerLink="/website-development" class="nav-link">Website
+                                    Development</a></li>
+                            <li class="nav-item"><a routerLink="/mobile-app-development" class="nav-link">Mobile
+                                    App Development</a></li>
+                            <li class="nav-item"><a routerLink="/website-maintenance" class="nav-link">Website
+                                    Maintenance</a></li>
+                            <li class="nav-item"><a routerLink="/search-engine-optimization" class="nav-link">Search
+                                    Engine
+                                    Optimization</a></li>
+                            <li class="nav-item"><a routerLink="/website-analyzer" class="nav-link">Free Website
+                                    Analyzer</a></li>
+                            <li class="nav-item"><a routerLink="/sitemap-generator" class="nav-link">Free Sitemap
+                                    Generator</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Sample Projects" routerLink="/sample-projects">
+                            Sample Projects
+                        </a>
+                    </li>
+                    <li class="dropdown submenu nav-item"><a data-toggle="tooltip" data-trigger="hover" title="About us"
+                            class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" href="#">About us</a>
+                        <ul role="menu" class=" dropdown-menu">
+                            <div class="arrow-left"></div>
+                            <li class="nav-item"><a title="Service" class="nav-link"
+                                    routerLink="/about/developer-team">Developer
+                                    Team</a>
+                            <li class="nav-item"><a title="Service" class="nav-link"
+                                    routerLink="/about/company-profile">Company
+                                    profile</a>
+                            </li>
+                            <li class="nav-item"><a title="Service" class="nav-link"
+                                    routerLink="/about/terms-of-use">Terms of
+                                    use</a>
+                            </li>
+                            <li class="nav-item"><a title="Service" class="nav-link"
+                                    routerLink="/about/privacy-policy">Privacy
+                                    policy</a>
+                            </li>
+                            <li class="nav-item"><a title="Service" class="nav-link"
+                                    routerLink="/about/refund-policy">Refund
+                                    policy</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item hidden">
+                        <a class="nav-link" data-toggle="tooltip" data-trigger="hover" title="Blog" routerLink="/blog"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Contact us" routerLink="/contact">
+                            Contact us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav menu w_menu signer">
+                    <li *ngIf="signedin === false" class="btn_get dropdown submenu nav-item" title="Sign In">
+                        <a data-toggle="tooltip" data-trigger="hover" title="Sign In" class="dropdown-toggle xsign"
+                            data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">
+                            <img src="assets/img/grader/firebase2.png" class="google-user-avatar" /> Sign In</a>
+                        <div role="menu" class=" dropdown-menu">
+                            <div class="signin-btn btn-signin" (click)="authService.GoogleAuth()">
+                                <div class="signin-icon-wrapper">
+                                    <img class="signin-icon" src="assets/img/social/google.svg" />
+                                </div>
+                                <div class="btn-text">Sign in with google</div>
+                            </div>
+                            <div class="fb connect" (click)="authService.FacebookAuth()">Sign in with Facebook</div>
+                            <div class="btn-auth btn-github large" (click)="authService.GithubAuth()">Sign in with
+                                GitHub</div>
+                            <div class="btn-auth btn-twitter large" (click)="authService.TwitterAuth()">Sign in with
+                                Twitter</div>
+                        </div>
+                    </li>
+                </ul>
+                <button *ngIf="signedin === true" class="btn_get" title="Sign Out" (click)="authService.SignOut()">
+                    <img [src]="user.photoURL" class="lexacle-user-avatar" />
+                    Sign Out
+                </button>
+
+            </div>
+            <div class="alter_nav">
+                <ul class="navbar-nav search_cart menu w_menu">
+                    <li class="nav-item shpping-cart dropdown submenu show">
+                        <a class="cart-btn nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            data-trigger="click" aria-haspopup="true" aria-expanded="true"> <i
+                                class="ti-bag size-20"></i><span class="num">2</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="cart-single-item clearfix">
+                                <a href="javascript:void(0)" class="nav_right_btn" title="Create account or Login"
+                                    *ngIf="user.displayName">{{user.displayName}}</a>
+                            </li>
+                            <li class="cart-single-item clearfix">
+                                <div id="status">
+                                </div>
+                            </li>
+                            <li class="cart_f">
+                                <div class="cart-pricing">
+                                    <p class="total">Subtotal :<span class="p-total text-right">$358.00</span></p>
+                                </div>
+                                <div class="cart-button mb-5">
+                                    <button class="btn btn-cart get_btn pink float-left">View Cart</button>
+                                    <button class="btn btn-cart get_btn dark float-right">Checkout</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

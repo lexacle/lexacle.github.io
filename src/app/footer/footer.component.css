@@ -1,0 +1,17 @@
+.event_footer_area {
+    background: #212146;
+}
+
+.footer_area {
+    position: relative;
+    overflow: hidden;
+}
+.company_widget .f_subscribe {
+    max-width: 300px;
+}
+.gmb-logo{
+    width: 24px;
+    height: 24px;
+    margin-left: -2px;
+    margin-top: -2px;
+}

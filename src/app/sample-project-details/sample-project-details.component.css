@@ -1,0 +1,7 @@
+.job_info .info_head i {
+    font-size: 40px;
+    color: #9979f7;
+    text-shadow: 0px 14px 30px rgb(94 44 237 / 40%);
+    margin-bottom: 35px;
+    display: inline-block;
+}

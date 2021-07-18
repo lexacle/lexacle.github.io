@@ -1,0 +1,389 @@
+<section class="sitemap_banner_area">
+    <div class="parallax-effecto"
+        style="background: url(/assets/img/bg/website-analyzer.webp) no-repeat; background-size: cover;">
+    </div>
+    <div class="container">
+        <div class="sitemap_banner_content site_map font-buntu">
+            <h1 class="f_p f_size_30 l_height50 f_600 t_color text-white">Free Website Analyzer</h1>
+            <p class="f_400 f_size_18 text-light">What is the optimization, performance and speed score of your
+                website?<br>
+                Is your website secure? Let's find out <span class="align-middle rotate-90"><i
+                        class="ti-hand-point-down size-30"></i></span></p>
+            <form [formGroup]="analyzerForm" (ngSubmit)="websiteAnalyzer()" novalidate>
+                <div class="input-group subcribes">
+                    <input type="text" formControlName="domain" class="form-control memail"
+                        placeholder="Enter url e.g lexacle.com" required>
+                    <button class="btn_submit btn_submit1 f_size_15 f_500 event_btn btn-hover" type="submit">Analyze
+                        Website</button>
+                    <button class="btn_submit btn_submit2 f_size_15 f_500 event_btn btn-hover" type="submit"><i
+                            class="ti-arrow-right"></i></button>
+                    <span class="error-icon danger-text" *ngIf="isSubmitted && errorControl.domain.errors?.required"><i
+                            class="ti-help size-30"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <p class="powered-by-google size-15" (click)="triggerModal(modalData)"><img
+                src="/assets/img/grader/google-login.svg" alt="Google Pagespeed Insights Website Analyzer" /> Powered by
+            Google
+            Lighthouse v8.0</p>
+
+    </div>
+</section>
+
+<ng-template #modalData let-modal>
+    <div class="modal-header gradient-bg">
+        <h4 class="modal-title text-light" id="modal-basic-title">Website Performance Results for <a href="{{wadomain}}">{{wadomain}}</a></h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true" class="ti-close text-light"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Are you sure you want to delete <span class="text-primary">"Agatha Harkness"</span> profile?</strong>
+        </p>
+
+        <p>All data related to west view profile will be removed permanently.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="modal.close('Save click')"><i class="ti-google"></i>
+            Email</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('Save click')"><i class="ti-facebook"></i>
+            Share</button>
+        <button type="button" class="btn btn-info" (click)="modal.close('Save click')"><i class="ti-twitter"></i>
+            Share</button>
+    </div>
+</ng-template>
+
+<section class="prototype_service_info">
+    <div class="container">
+        <h2 class="f_size_30 f_600 t_color3 l_height45 text-center mb_90">Boosting your SEO with Website Analyzer</h2>
+        <div class="row p_service_info">
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pr_70">
+                    <div class="icon icon_one"><i class="ti-desktop"></i></div>
+                    <h5 class="f_600 f_p t_color3">Desktop Performance</h5>
+                    <p class="f_400">Website Analyzer checks for performance speed and optimizations specifically for
+                        desktop environments.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pl_50 pr_20">
+                    <div class="icon icon_two"><i class="ti-mobile"></i></div>
+                    <h5 class="f_600 f_p t_color3">Mobile Performance</h5>
+                    <p class="f_400">Analysis of your website's optimization score, speed and responsiveness on all
+                        major mobile devices</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pl_70">
+                    <div class="icon icon_three"><i class="ti-bolt"></i></div>
+                    <h5 class="f_600 f_p t_color3">Website Speed</h5>
+                    <p class="f_400">General website loading speed for both desktop and mobile and resource optimization
+                        recommendations.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pr_70">
+                    <div class="icon icon_four"><i class="ti-bookmark"></i></div>
+                    <h5 class="f_600 f_p t_color3">PWA Capability</h5>
+                    <p class="f_400">Progressive Web App feature checks for Installation feature, Offline capability,
+                        speed and security</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pl_50 pr_20">
+                    <div class="icon icon_five"><i class="ti-lock"></i></div>
+                    <h5 class="f_600 f_p t_color3">Website Security</h5>
+                    <p class="f_400">Analyzes your website for secure socket layer (SSL), SSL Issuer, SSL Validity, SSL
+                        Issuance and Expiry date.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="p_service_item pl_70">
+                    <div class="icon icon_six"><i class="ti-fullscreen"></i></div>
+                    <h5 class="f_600 f_p t_color3">Responsiveness</h5>
+                    <p class="f_400">Your website must fit on all devices i.e Desktop, Tablet and Smartphone without
+                        users having to pinch their screen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pricing_area_two sec_pad">
+    <div class="container custom_container p0">
+        <div class="sec_title text-center">
+            <h2 class="f_p f_size_30 l_height50 f_600 t_color2">Website Optimization Packages</h2>
+            <p class="text-justify">We guarantee a general performance score of above 90% on Google Lighthouse, Google
+                PageSpeed Insights and our Website Analyzer within the first month of subscription regardless of your
+                development architecture or framework. Choose a package below to get started.</p>
+        </div>
+        <div class="tab-content price_content price_content_two">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="price_item">
+                        <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Basic</h5>
+                        <p>Basic Website Optimization</p>
+                        <div class="price f_600 f_size_30 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub></div>
+                        <ul class="list-unstyled p_list">
+                            <li>Speed Optimization<i class="ti-check"></i></li>
+                            <li>Image Optimization<i class="ti-check"></i></li>
+                            <li>CSS / JS Minification<i class="ti-check"></i></li>
+                            <li>Meta Tags Optimization<i class="ti-check"></i></li>
+                            <li>Monthly Performance Reports<i class="ti-close"></i></li>
+                        </ul>
+                        <a href="#" class="price_btn btn_hover">Start Today</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="price_item">
+                        <div class="tag"><span>Popular</span></div>
+                        <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Standard</h5>
+                        <p>Standard Website Optimization</p>
+                        <div class="price f_600 f_size_30 t_color2">$35.00<sub class="f_size_16 f_400">/ mo</sub></div>
+                        <ul class="list-unstyled p_list">
+                            <li><i class="ti-check"></i>Only 2 Operators</li>
+                            <li><i class="ti-check"></i>Abandoned Cart</li>
+                            <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                            <li><i class="ti-close"></i>Order Notifications</li>
+                            <li><i class="ti-close"></i>Landing Pages</li>
+                        </ul>
+                        <a href="#" class="price_btn btn_hover">Start Today</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="price_item">
+                        <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Professional</h5>
+                        <p>Professional Website Optimization</p>
+                        <div class="price f_600 f_size_30 t_color2">$40.00<sub class="f_size_16 f_400">/ mo</sub></div>
+                        <ul class="list-unstyled p_list">
+                            <li><i class="ti-check"></i>Only 2 Operators</li>
+                            <li><i class="ti-check"></i>Abandoned Cart</li>
+                            <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                            <li><i class="ti-close"></i>Order Notifications</li>
+                            <li><i class="ti-close"></i>Landing Pages</li>
+                        </ul>
+                        <a href="#" class="price_btn btn_hover">Start Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs price_tab price_tab_two mt_70 hidden" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active_hover active show" id="monthly-tab" data-toggle="tab" href="#monthly"
+                    role="tab" aria-controls="monthly" aria-selected="false">Billed monthly</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="yearly-tab" data-toggle="tab" href="#yearly" role="tab" aria-controls="yearly"
+                    aria-selected="true">Billed annually</a>
+            </li>
+            <li class="hover_bg" style="left: 200px; width: 193px;"></li>
+            <li class="hover_bg" style="left: 200px; width: 193px;"></li>
+        </ul>
+
+        <div class="tab-content price_content price_content_two hidden">
+            <div class="tab-pane fade active show" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <img src="/assets/img/price/one.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Silver</h5>
+                            <p>Create your first online course</p>
+                            <div class="price f_600 f_size_30 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li>Speed Optimization<i class="ti-check"></i></li>
+                                <li>Image Optimization<i class="ti-check"></i></li>
+                                <li>CSS / JS Minification<i class="ti-check"></i></li>
+                                <li>Meta Tags Optimization<i class="ti-check"></i></li>
+                                <li>Monthly Performance Reports<i class="ti-close"></i></li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <div class="tag"><span>Popular</span></div>
+                            <img src="/assets/img/price/two.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Platinum</h5>
+                            <p>Our most popular plan</p>
+                            <div class="price f_700 f_size_40 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li><i class="ti-check"></i>Only 2 Operators</li>
+                                <li><i class="ti-check"></i>Abandoned Cart</li>
+                                <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                                <li><i class="ti-close"></i>Order Notifications</li>
+                                <li><i class="ti-close"></i>Landing Pages</li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <img src="/assets/img/price/three.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Gold</h5>
+                            <p>Experience thebest of lorem</p>
+                            <div class="price f_700 f_size_40 t_color2">$99.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li><i class="ti-check"></i>Only 2 Operators</li>
+                                <li><i class="ti-check"></i>Abandoned Cart</li>
+                                <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                                <li><i class="ti-close"></i>Order Notifications</li>
+                                <li><i class="ti-close"></i>Landing Pages</li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <img src="/assets/img/price/one.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Silver</h5>
+                            <p>Create your first online course</p>
+                            <div class="price f_700 f_size_40 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li><i class="ti-check"></i>Only 2 Operators</li>
+                                <li><i class="ti-check"></i>Abandoned Cart</li>
+                                <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                                <li><i class="ti-close"></i>Order Notifications</li>
+                                <li><i class="ti-close"></i>Landing Pages</li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <div class="tag"><span>Popular</span></div>
+                            <img src="/assets/img/price/two.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Platinum</h5>
+                            <p>Create your first online course</p>
+                            <div class="price f_700 f_size_40 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li><i class="ti-check"></i>Only 2 Operators</li>
+                                <li><i class="ti-check"></i>Abandoned Cart</li>
+                                <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                                <li><i class="ti-close"></i>Order Notifications</li>
+                                <li><i class="ti-close"></i>Landing Pages</li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="price_item">
+                            <img src="/assets/img/price/three.png" alt="">
+                            <h5 class="f_p f_size_20 f_600 t_color2 mt_30">Gold</h5>
+                            <p>Create your first online course</p>
+                            <div class="price f_700 f_size_40 t_color2">$25.00<sub class="f_size_16 f_400">/ mo</sub>
+                            </div>
+                            <ul class="list-unstyled p_list">
+                                <li><i class="ti-check"></i>Only 2 Operators</li>
+                                <li><i class="ti-check"></i>Abandoned Cart</li>
+                                <li><i class="ti-check"></i>Facebook &amp; Instagram Ads</li>
+                                <li><i class="ti-close"></i>Order Notifications</li>
+                                <li><i class="ti-close"></i>Landing Pages</li>
+                            </ul>
+                            <a href="#" class="price_btn btn_hover">Start Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tracking_product_area sec_pad hidden">
+    <div class="container mt-5">
+        <div class="tracking_pr_item" style="background: #fe8585;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 tracking_bg">
+                    <img src="/assets/img/tinkers/watch.png" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="tracking_content wow fadeInDown"
+                        style="visibility: visible; animation-name: fadeInDown;">
+                        <h3>You may be losing potential clients to slow websites</h3>
+                        <p>Most website visitors abandon websites that take longer than 3 seconds to load. Are you
+                            losing on your website traffic?</p>
+                        <a href="#" class="seo_btn seo_btn_two btn_hover">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="s_pricing_area sec_pad hidden">
+    <div class="container custom_container">
+        <div class="sec_title text-center mb_70 wow fadeInUp" data-wow-delay="0.3s">
+            <h2 class="f_p f_size_30 l_height50 f_600 t_color">Ready to Optimize your website?</h2>
+            <p class="f_400 f_size_18 l_height34">We will speed up your website, ensure that it works offline and enlist
+                it on Google <br> among various optimizations. Choose a package below</p>
+        </div>
+        <div class="row mb_30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="s_pricing-item wow fadeInLeft" data-wow-delay="0.4s">
+                    <img class="shape_img" src="/assets/img/kill/price_line1.png" alt="">
+                    <div class="s_price_icon p_icon1">
+                        <i class="flaticon-mortarboard"></i>
+                    </div>
+                    <h5 class="f_p f_600 f_size_20 t_color mb-0 mt-5">SEO Package</h5>
+                    <p class="f_p f_400">Your website on Google Search</p>
+                    <div class="price f_size_40 f_p f_700">KES. 8,000.00<sub class="f_400 f_size_16">/ Lifetime</sub>
+                    </div>
+                    <ul class="list-unstyled mt_30">
+                        <li>Google Search Availability</li>
+                        <li>Google My Business Listing</li>
+                        <li>Website plugins update</li>
+                        <li>Website Speed Optimization</li>
+                    </ul>
+                    <a href="#" class="btn btn-lg price_btn mt_30">Choose This Plan</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="s_pricing-item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="tag_label blue_bg">Popular</div>
+                    <img class="shape_img" src="/assets/img/kill/price_line2.png" alt="">
+                    <div class="s_price_icon p_icon2">
+                        <i class="flaticon-lightbulb"></i>
+                    </div>
+                    <h5 class="f_p f_600 f_size_20 t_color mb-0 mt-5">PWA Package</h5>
+                    <p class="f_p f_400">Your website on steroids</p>
+                    <div class="price f_size_40 f_p f_700">KES. 10,000.00<sub class="f_400 f_size_16">/ Lifetime</sub>
+                    </div>
+                    <ul class="list-unstyled mt_30">
+                        <li>Works Offline</li>
+                        <li>Installable as an app</li>
+                        <li>Super Fast loading speed</li>
+                        <li>Push Notifications Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-lg price_btn mt_30">Choose This Plan</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="s_pricing-item wow fadeInRight" data-wow-delay="0.8s">
+                    <img class="shape_img" src="/assets/img/kill/price_line3.png" alt="">
+                    <div class="s_price_icon p_icon3">
+                        <i class="flaticon-target"></i>
+                    </div>
+                    <h5 class="f_p f_600 f_size_20 t_color mb-0 mt-5">Gold Package</h5>
+                    <p class="f_p f_400">Everything a website needs</p>
+                    <div class="price f_size_40 f_p f_700">KES. 15,000.00<sub class="f_400 f_size_16">/ Lifetime</sub>
+                    </div>
+                    <ul class="list-unstyled mt_30">
+                        <li>Everything on SEO Package</li>
+                        <li>Everything in PWA Package</li>
+                        <li>Automated Website Optimizer</li>
+                        <li>1 Month Free Maintenance</li>
+                    </ul>
+                    <a href="#" class="btn btn-lg price_btn mt_30">Choose This Plan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
